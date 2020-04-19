@@ -1,0 +1,53 @@
+body {
+	background-image: url('./Images/prom.png');
+	filter: hue-rotate(0);
+}
+
+h1,h2 {
+	color: #90EE90;
+	text-shadow: 2px 2px gray;
+}
+
+#banner{
+	width: 100%;
+	height: auto;
+}
+
+#banner img {
+	width: 500px;
+	height: auto;
+}
+
+.pat {
+	width: 300px;
+	height: auto;
+}
+
+
+.rotate {
+  animation: rotation 100s infinite linear;
+  
+}
+
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg) scale(1);
+  }
+  to {
+    transform: rotate(359deg) scale(2.5);
+  }
+}
+
+.flash {
+	display : none;
+}
+#audio {
+	display: none
+}
+.expand{
+	transition: 3s all
+}
+.expand:hover {
+	transform:scale(2.5)
+}
