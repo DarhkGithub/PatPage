@@ -1,17 +1,61 @@
 body {
-	background-image: url('./Images/prom.png');
-	filter: hue-rotate(0);
+	background-image: url('./Images/pat.gif');
 }
 
-h1,h2 {
+h1 {
+	color: rgb(241, 2, 2);
+	text-shadow: 5px 5px gray;
+	font-family: 'Piedra', cursive;
+	font-size: 5rem;
+	font-family: 'Oswald', sans-serif;
+}
+
+h2 {
 	color: #90EE90;
-	text-shadow: 2px 2px gray;
+	text-shadow: 5px 5px gray;
+	font-family: 'Piedra', cursive;
+	font-size: 5rem;
+	font-family: 'Oswald', sans-serif;
 }
 
-#banner{
-	width: 100%;
+#sonic {
+	z-index: 9999;
 	height: auto;
+	width: 150px;
+	position: fixed;
+	left: 0%;
+	bottom: -355px;
+	transition: 3s all;
 }
+#sonic1 {
+	z-index: 9999;
+	height: auto;
+	width: 100px;
+	position: fixed;
+	left: 15%;
+	bottom: -355px;
+	transition: 6s all;
+}
+
+#bowser {
+	z-index: 9999;
+	height: auto;
+	width: 150px;
+	position: fixed;
+	bottom: -300px;
+	right: 0%;
+	transition: 10s all;
+}
+#bowser1 {
+	z-index: 9999;
+	height: auto;
+	width: 100px;
+	position: fixed;
+	bottom: -300px;
+	right: 15%;
+	transition: 1s all;
+}
+
 
 #banner img {
 	width: 500px;
@@ -25,22 +69,30 @@ h1,h2 {
 
 
 .rotate {
-  animation: rotation 100s infinite linear;
+  animation: rotation 5s infinite linear;
   
 }
 
 
 @keyframes rotation {
-  from {
-    transform: rotate(0deg) scale(1);
+  0% {
+    transform: rotate(0deg) scale(.05);
   }
-  to {
-    transform: rotate(359deg) scale(2.5);
+  50% {
+    transform: rotate(359deg) scale(1.1);
   }
+  100% {
+    transform: rotate(0deg) scale(.05);
+  }
+
 }
 
 .flash {
 	display : none;
+}
+img.bear {
+	width: 300px;
+	height: auto;
 }
 #audio {
 	display: none
@@ -51,3 +103,43 @@ h1,h2 {
 .expand:hover {
 	transform:scale(2.5)
 }
+
+#Rachael, #aviz{
+	background-image: linear-gradient(to right, red , yellow);
+	text-shadow: 4px 4px blue;
+}
+#Tree, #nerd, #sugar {
+	background-image: linear-gradient(red 10%, green 85%, blue 90%); 
+
+	font-family: 'Faster One', cursive;
+	text-shadow: 8px 8px black;
+}
+#Jackie, #white, #vick{
+	background-image: linear-gradient(red, orange, yellow, green, blue, indigo, violet);
+
+	font-family: 'Eater', cursive;
+	text-shadow: 6px 6px green;
+}
+.Asian-Font {
+	font-family: 'Shojumaru', cursive;
+}
+
+h3, .h3 {
+	font-size: 2.5rem;
+	color: white;
+}
+
+#StupidAssVideo {
+	position: fixed;
+	width: 100%;
+	height: auto;
+}
+
+#Content {
+	position: relative;
+	z-index: 999;
+	visibility: visible
+
+}
+
+
