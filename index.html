@@ -48,7 +48,7 @@
 		<div class="container py-5">
 			<div class="row py-5">
 				<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-					<h1 id="header" class="text-center">Highlights of Patric James Dempsey</h1>
+					<h1 id="name" class="text-center">Highlights of Patric James Dempsey</h1>
 					<div class="carousel-inner">
 					  <div class="carousel-item active">
 						<img class="img-fluid" src="./Gallery/patfreinds.png" alt="First slide">
@@ -173,9 +173,9 @@
 				<div class="col-sm-1"></div>
 				<img id="" class="pat rotate col-sm-2" src="./Images/bowsergif.gif" alt="photo of our best friend"/>
 				<img id="" class="pat rotate col-sm-2" src="./Images/pat2.png" alt="photo of our best friend"/>
+				<img id="" class="pat rotate col-sm-2" src="./Images/supreme.gif" alt="photo of our best friend"/>
 				<img id="" class="pat rotate col-sm-2" src="./Images/oie_2045745ejT19DAI.gif" alt="photo of our best friend"/>
 				<img id="" class="pat rotate col-sm-2" src="./Images/pat2.png" alt="photo of our best friend"/>
-				<img id="" class="pat rotate col-sm-2" src="./Images/supreme.gif" alt="photo of our best friend"/>
 				<div class="col-sm-1"></div>
 			</div>
 		</div>
@@ -224,7 +224,13 @@
     var f = document.getElementById('header');
     setInterval(function() {
         f.style.visibility = (f.style.visibility == 'hidden' ? 'visible' : 'hidden');
-    }, 200);
+	}, 200);
+	
+	var g = document.getElementById('name');
+    setInterval(function() {
+        g.style.visibility = (g.style.visibility == 'hidden' ? 'visible' : 'hidden');
+    }, 50);
+
 
 	});
 
