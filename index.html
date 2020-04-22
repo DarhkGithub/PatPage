@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="./styles.css"/>
@@ -11,6 +10,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Piedra&display=swap" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet"> 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
@@ -48,7 +48,7 @@
 		<div class="container py-5">
 			<div class="row py-5">
 				<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-					<h1 id="name" class="text-center">Highlights of Patric James Dempsey</h1>
+					<h1 id="name" class="text-center">Highlights of Patric J. Dempsey</h1>
 					<div class="carousel-inner">
 					  <div class="carousel-item active">
 						<img class="img-fluid" src="./Gallery/patfreinds.png" alt="First slide">
@@ -145,6 +145,8 @@
 			</div>
 		</div>
 		
+		
+
 		<div class="container-fluid">
 			<row>
 			<marquee width="100%" direction="right" height="auto" scrollamount="50">
@@ -168,6 +170,36 @@
 			</row>
 		</div>
 
+		<div class="comment">
+			<textarea id="title" type="text "rows="2" cols="4" onkeyup="Allow()" placeholder="write a comment......"></textarea>
+			<input type="submit" value="Post" onclick="insert()" style="width:20px;" /></form>
+			</div>
+			<div id="display"></div>
+			<script type="text/javascript">
+			var titles = [];
+			var titleInput = document.getElementById("title");
+			var messageBox = document.getElementById("display");
+			function Allow()
+			{
+			if (!user.title.value.match(/[a-zA-Z]$/) && user.title.value !="")
+			{
+			user.title.value="";
+			alert("Please Enter only alphabets");
+			}
+			window.location.reload()
+			}
+			function insert () {
+			titles.push(titleInput.value);
+			clearAndShow();
+			}
+			function clearAndShow ()
+			{
+			titleInput.value = "";
+			messageBox.innerHTML = "";
+			messageBox.innerHTML += " " + titles.join("<br/> ") + "<br/>";
+			}
+			</script>
+		
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-sm-1"></div>
@@ -203,16 +235,26 @@
 
 			</div>
 		</div>
-		<!-- <div class="container-fluid">
-			<div class="row">
-				<img id="" class="col-sm-3" src="./Images/banjosex.gif"/>
-				<img id="" class="col-sm-3" src="./Images/banjosex.gif"/>
-				<img id="" class="col-sm-3" src="./Images/banjosex.gif"/>
-				<img id="" class="col-sm-3" src="./Images/banjosex.gif"/>
-			</div>
-		</div> -->
-	</div> 
 
+		<div class="container py-5">
+			<div class="row py-5">
+				<div class="col-sm-2"></div>
+				<form class="col-sm-8 bg-light p-5">
+					<div class="form-group">
+					  <label for="exampleInputEmail1">Full Name</label>
+					  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+					  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+					</div>
+					<div class="form-group">
+					  <label for="exampleInputPassword1">A/S/L</label>
+					  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Message">
+					</div>
+					<button type="submit" class="btn btn-primary">Submit</button>
+				  </form>
+				  <div class="col-sm-2"></div>
+			</div>
+		</div>
+	</div> 
 </body>
 
 
